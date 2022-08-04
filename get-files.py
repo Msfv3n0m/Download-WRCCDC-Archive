@@ -21,7 +21,7 @@ for link in soup.findAll('a'):
 print(file_names)
 for file_name in file_names:    
     print("Downloading", file_name, "from", host_site, "...")
-    path = "C:\\Users\\jlbie\\Downloads\\Original-ova\\" + file_name
+    path = "C:\\Users\\<username>\\Downloads\\Original-ova\\" + file_name
     file_url = host_site + "/" + file_name
     # URL of the image to be downloaded is defined as image_url
     r = requests.get(file_url) # create HTTP response object
