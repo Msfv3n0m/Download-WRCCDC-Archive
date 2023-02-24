@@ -2,6 +2,5 @@ This project will download ova files from any of WRCCDC's parent directories, ed
 Requirements:
 - VMWare's ovftool
 - python
-- change all occurances of <username> to your username in both scripts
 
 if it still does not work, check the file paths
