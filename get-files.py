@@ -4,7 +4,7 @@ import os
 from bs4 import BeautifulSoup
 import re
 import urllib.request 
-from urllib.request import Request, urlopen
+# from urllib.request import Request, urlopen
 import lxml
 username = os.getlogin()
 filestartswith1 = "coal"
