@@ -7,8 +7,8 @@ mkdir $HOME\Original-ova
 #Download files
 $pythonScript = (Get-Item .).FullName + "\get-files.py"
 echo $cd
-$python-path = $(Read-Host "Please enter the path to the python executable: ")
-Start-Process $python-path -ArgumentList $pythonScript -Wait
+$python_path = $(Read-Host "Please enter the path to the python executable: ")
+Start-Process $python_path -ArgumentList $pythonScript -Wait
 #Format ova
 gci "$HOME\Downloads\Original-ova" | ?{$_.Name -like "*.ova"} | %{$newPath = "$HOME\Downloads\Formatted-ova\" + $_.Name; & "C:\Program Files\VMWare\VMware OVF Tool\ovftool.exe" $_.FullName $newPath} 
 #Change format to vmx to edit version number
