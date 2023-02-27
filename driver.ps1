@@ -2,8 +2,8 @@
 This script downloads ova files from wrccdc's archive, edits their version number and prepares them to be uploaded to vSphere
 The url is specified in the get-files,py file
 #>
-mkdir $HOME\Downloads\Formatted-ova
-mkdir $HOME\Downloads\Original-ova
+If (-Not (Test-Path $HOME\Downloads\Formatted-ova)){mkdir $HOME\Downloads\Formatted-ova}
+If (-Not (Test-Path $HOME\Downloads\Original-ova)){mkdir $HOME\Downloads\Original-ova}
 #Download files
 $pythonScript = (Get-Item .).FullName + "\get-files.py"
 echo $cd
