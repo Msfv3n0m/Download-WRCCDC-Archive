@@ -21,18 +21,19 @@ for link in soup.findAll('a'):
     else:
         pass
 print(file_names)
-for file_name in file_names:    
-    print("Downloading", file_name, "from", host_site, "...")
-    path = "C:\\Users\\" + username + "\\Downloads\\Original-ova\\" + file_name
-    file_url = host_site + "/" + file_name
-    # URL of the image to be downloaded is defined as image_url
-    r = requests.get(file_url) # create HTTP response object
-    # send a HTTP request to the server and save
-    # the HTTP response in a response object called r
-    with open(path,'wb') as f:
-        # Saving received content as a png file in
-        # binary format
-        # write the contents of the response (r.content)
-        # to a new file in binary mode.
-        f.write(r.content)
-    print(file_name," download finished")
+for file_name in file_names:
+    if (file_name.startswith('')):
+        print("Downloading", file_name, "from", host_site, "...")
+        path = "C:\\Users\\" + username + "\\Downloads\\Original-ova\\" + file_name
+        file_url = host_site + "/" + file_name
+        # URL of the image to be downloaded is defined as image_url
+        r = requests.get(file_url) # create HTTP response object
+        # send a HTTP request to the server and save
+        # the HTTP response in a response object called r
+        with open(path,'wb') as f:
+            # Saving received content as a png file in
+            # binary format
+            # write the contents of the response (r.content)
+            # to a new file in binary mode.
+            f.write(r.content)
+        print(file_name," download finished")
