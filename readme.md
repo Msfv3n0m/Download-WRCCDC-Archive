@@ -9,7 +9,7 @@ This project will download ova files from any of WRCCDC's parent directories, ed
 1. run `pip -r requirements.txt` or `pip3 -r requirements.txt`
 2. edit the python script variables/logic to download only the files you want to from the wrccdc archive
   - Do this by editing the filestartswith1 and filestartswith2 variables to the beginning of the filename you want to download
-  - If you want to download more or fewer files, you will also have to change the logic on line x of the python script
+  - If you want to download more or fewer files, you will also have to change the logic on line 27 of the python script
 3. copy the path to your python3 executable (ex: `C:\Users\Admin\AppData\Local\Programs\Python\Python311\python.exe`)
 4. run `driver.ps1` with powershell 
 5. if it worked correctly, you will have .ova or .ovf files in your Downloads\Formatted-ova folder. You may now upload them to vSphere
