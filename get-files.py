@@ -22,7 +22,7 @@ for link in soup.findAll('a'):
         pass
 print(file_names)
 for file_name in file_names:
-    if (file_name.startswith('')):
+    if file_name.startswith('') or file_name.startswith(''):
         print("Downloading", file_name, "from", host_site, "...")
         path = "C:\\Users\\" + username + "\\Downloads\\Original-ova\\" + file_name
         file_url = host_site + "/" + file_name
