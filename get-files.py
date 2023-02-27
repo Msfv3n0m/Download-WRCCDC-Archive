@@ -1,13 +1,13 @@
 # imported the requests library
 import requests
 import os
-username = os.getlogin()
 from bs4 import BeautifulSoup
 import re
 import urllib.request 
 from urllib.request import Request, urlopen
-host_site = "https://archive.wrccdc.org/images/2020/wrccdc-2020-invitationals/rock.bottom/"
 import lxml
+username = os.getlogin()
+host_site = "https://archive.wrccdc.org/images/2020/wrccdc-2020-invitationals/rock.bottom/"
 user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 headers={'User-Agent':user_agent,} 
 request=urllib.request.Request(host_site,None,headers) #The assembled request
